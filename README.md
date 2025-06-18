@@ -75,7 +75,7 @@ Key                                            | Action
 Key                                  | Action
 -------------------------------------|----------------------------------
 `<menu>`, `M-<f12>`                  | :zap: Show type and docs in a small inline window (repeat to hide the window)
-`C-c C-s C-e` (**e**val)             | :zap: Evaluate (reduce) an expression (`C-u` to pick reduction rules)
+`(C-u) C-c C-s C-e` (**e**val)       | :zap: Evaluate (reduce) an expression (Add `C-u` to pick reduction rules)
 `C-c C-s C-s` (**s**earch)           | :zap: Search F*'s global context for functions and theorems
 `C-c C-s C-d` (**d**ocumentation)    | :zap: Show type and documentation of a symbol
 `C-c C-s C-p` (**p**rint)            | :zap: Show type, documentation, and full definition of a symbol
@@ -93,17 +93,17 @@ Key                       | Action
 
 The following keybindings start F* if needed:
 
-Proof-General            | :atom: Atom   | Action
--------------------------|---------------|----------------------------------------------------------
-`C-c C-n` (**n**ext)     | `C-S-n`       | Send the next paragraph to F* (with `C-u`, send it in lax mode)
-`C-c C-p` (**p**revious) | `C-S-p`       | Retract the last paragraph
-`C-c C-.`                | `C-S-.`       | Jump to beginning of unprocessed section
-`C-c RET` or `C-c C-RET` | `C-S-i`       | Send everything up to the current point to F*
-`C-c C-l` (**l**ax)      | `C-S-l`       | Send everything up to the current point to F*, in lax mode
-`C-c C-b` (**b**uffer)   | `C-S-b`       | Send entire buffer to F* in lax mode
-`C-c C-r` (**r**eload)   | `C-S-r`       | Reload dependencies of the current buffer and reprocess its contents (add `C-u` for lax mode)
-`C-c C-x` (e**x**it)     | `C-M-c`       | :zap: Kill the F* subprocess
-`C-c C-c`                | `C-M-S-c`     | :unicorn: Interrupt the currently-running verification task.  On older F* builds, this sends an interrupt to Z3, which can be unreliable.
+Proof-General               | :atom: Atom   | Action
+----------------------------|---------------|----------------------------------------------------------
+`(C-u) C-c C-n` (**n**ext)  | `C-S-n`       | Send the next paragraph to F* (Add `C-u` for lax mode)
+`C-c C-p` (**p**revious)    | `C-S-p`       | Retract the last paragraph
+`C-c C-.`                   | `C-S-.`       | Jump to beginning of unprocessed section
+`C-c RET` or `C-c C-RET`    | `C-S-i`       | Send everything up to the current point to F*
+`C-c C-l` (**l**ax)         | `C-S-l`       | Send everything up to the current point to F*, in lax mode
+`C-c C-b` (**b**uffer)      | `C-S-b`       | Send entire buffer to F* in lax mode
+`(C-u) C-c C-r` (**r**eload)| `C-S-r`       | Reload dependencies of the current buffer and reprocess its contents (add `C-u` for lax mode)
+`C-c C-x` (e**x**it)        | `C-M-c`       | :zap: Kill the F* subprocess
+`C-c C-c`                   | `C-M-S-c`     | :unicorn: Interrupt the currently-running verification task.  On older F* builds, this sends an interrupt to Z3, which can be unreliable.
 
 Use <kbd>M-x customize-variable RET fstar-interactive-keybinding-style RET</kbd> to pick a keybinding style. The default is Proof-General; the other option is Atom. Please be aware of the [current restrictions](https://github.com/FStarLang/FStar/wiki/Dealing-with-F%E2%98%85-dependencies#when-invoking-f-in-interactive-mode) on the interactive-mode.
 
